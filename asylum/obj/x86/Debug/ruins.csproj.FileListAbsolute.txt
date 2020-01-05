@@ -1,0 +1,109 @@
+C:\Users\kevin\Desktop\ruins\ruins\bin\Windows\x86\Debug\ruins.exe
+C:\Users\kevin\Desktop\ruins\ruins\bin\Windows\x86\Debug\ruins.pdb
+C:\Users\kevin\Desktop\ruins\ruins\bin\Windows\x86\Debug\MonoGame.Framework.dll
+C:\Users\kevin\Desktop\ruins\ruins\bin\Windows\x86\Debug\SharpDX.MediaFoundation.dll
+C:\Users\kevin\Desktop\ruins\ruins\bin\Windows\x86\Debug\SharpDX.dll
+C:\Users\kevin\Desktop\ruins\ruins\bin\Windows\x86\Debug\SharpDX.XAudio2.dll
+C:\Users\kevin\Desktop\ruins\ruins\bin\Windows\x86\Debug\SharpDX.DXGI.dll
+C:\Users\kevin\Desktop\ruins\ruins\bin\Windows\x86\Debug\SharpDX.Direct3D11.dll
+C:\Users\kevin\Desktop\ruins\ruins\bin\Windows\x86\Debug\SharpDX.Direct2D1.dll
+C:\Users\kevin\Desktop\ruins\ruins\bin\Windows\x86\Debug\SharpDX.XInput.dll
+C:\Users\kevin\Desktop\ruins\ruins\bin\Windows\x86\Debug\MonoGame.Framework.xml
+C:\Users\kevin\Desktop\ruins\ruins\bin\Windows\x86\Debug\SharpDX.MediaFoundation.xml
+C:\Users\kevin\Desktop\ruins\ruins\bin\Windows\x86\Debug\SharpDX.xml
+C:\Users\kevin\Desktop\ruins\ruins\bin\Windows\x86\Debug\SharpDX.XAudio2.xml
+C:\Users\kevin\Desktop\ruins\ruins\bin\Windows\x86\Debug\SharpDX.DXGI.xml
+C:\Users\kevin\Desktop\ruins\ruins\bin\Windows\x86\Debug\SharpDX.Direct3D11.xml
+C:\Users\kevin\Desktop\ruins\ruins\bin\Windows\x86\Debug\SharpDX.Direct2D1.xml
+C:\Users\kevin\Desktop\ruins\ruins\bin\Windows\x86\Debug\SharpDX.XInput.xml
+C:\Users\kevin\Desktop\ruins\ruins\obj\x86\Debug\ruins.csprojAssemblyReference.cache
+C:\Users\kevin\Desktop\ruins\ruins\obj\x86\Debug\ruins.csproj.CoreCompileInputs.cache
+C:\Users\kevin\Desktop\ruins\ruins\obj\x86\Debug\ruins.csproj.CopyComplete
+C:\Users\kevin\Desktop\ruins\ruins\obj\x86\Debug\ruins.exe
+C:\Users\kevin\Desktop\ruins\ruins\obj\x86\Debug\ruins.pdb
+C:\Users\kevin\Desktop\ruins\ruins\bin\Windows\x86\Debug\Content\Backgrounds\gamescreen_bg.xnb
+C:\Users\kevin\Desktop\ruins\ruins\bin\Windows\x86\Debug\Content\Backgrounds\mainmenu_bg.xnb
+C:\Users\kevin\Desktop\ruins\ruins\bin\Windows\x86\Debug\Content\Sprites\player1.xnb
+C:\Users\kevin\Desktop\ruins\ruins\bin\Windows\x86\Debug\Content\Sprites\wall1.xnb
+C:\Users\kevin\Desktop\ruins\ruins\bin\Windows\x86\Debug\Content\Sprites\wallTest.xnb
+C:\Users\kevin\Desktop\ruins\ruins\bin\Windows\x86\Debug\Content\Sprites\knight.xnb
+C:\Users\kevin\Desktop\ruins\ruins\bin\Windows\x86\Debug\Content\Sprites\rock1.xnb
+C:\Users\kevin\Desktop\project spelunky\ruins\ruins\bin\Windows\x86\Debug\Content\Sprites\knight.xnb
+C:\Users\kevin\Desktop\project spelunky\ruins\ruins\bin\Windows\x86\Debug\Content\Sprites\player1.xnb
+C:\Users\kevin\Desktop\project spelunky\ruins\ruins\bin\Windows\x86\Debug\Content\Sprites\rock1.xnb
+C:\Users\kevin\Desktop\project spelunky\ruins\ruins\bin\Windows\x86\Debug\Content\Sprites\wall1.xnb
+C:\Users\kevin\Desktop\project spelunky\ruins\ruins\bin\Windows\x86\Debug\Content\Sprites\wallTest.xnb
+C:\Users\kevin\Desktop\project spelunky\ruins\ruins\bin\Windows\x86\Debug\Content\Backgrounds\gamescreen_bg.xnb
+C:\Users\kevin\Desktop\project spelunky\ruins\ruins\bin\Windows\x86\Debug\Content\Backgrounds\mainmenu_bg.xnb
+C:\Users\kevin\Desktop\project spelunky\ruins\ruins\bin\Windows\x86\Debug\ruins.exe
+C:\Users\kevin\Desktop\project spelunky\ruins\ruins\bin\Windows\x86\Debug\ruins.pdb
+C:\Users\kevin\Desktop\project spelunky\ruins\ruins\bin\Windows\x86\Debug\MonoGame.Framework.dll
+C:\Users\kevin\Desktop\project spelunky\ruins\ruins\bin\Windows\x86\Debug\SharpDX.MediaFoundation.dll
+C:\Users\kevin\Desktop\project spelunky\ruins\ruins\bin\Windows\x86\Debug\SharpDX.dll
+C:\Users\kevin\Desktop\project spelunky\ruins\ruins\bin\Windows\x86\Debug\SharpDX.XAudio2.dll
+C:\Users\kevin\Desktop\project spelunky\ruins\ruins\bin\Windows\x86\Debug\SharpDX.DXGI.dll
+C:\Users\kevin\Desktop\project spelunky\ruins\ruins\bin\Windows\x86\Debug\SharpDX.Direct3D11.dll
+C:\Users\kevin\Desktop\project spelunky\ruins\ruins\bin\Windows\x86\Debug\SharpDX.Direct2D1.dll
+C:\Users\kevin\Desktop\project spelunky\ruins\ruins\bin\Windows\x86\Debug\SharpDX.XInput.dll
+C:\Users\kevin\Desktop\project spelunky\ruins\ruins\bin\Windows\x86\Debug\MonoGame.Framework.xml
+C:\Users\kevin\Desktop\project spelunky\ruins\ruins\bin\Windows\x86\Debug\SharpDX.MediaFoundation.xml
+C:\Users\kevin\Desktop\project spelunky\ruins\ruins\bin\Windows\x86\Debug\SharpDX.xml
+C:\Users\kevin\Desktop\project spelunky\ruins\ruins\bin\Windows\x86\Debug\SharpDX.XAudio2.xml
+C:\Users\kevin\Desktop\project spelunky\ruins\ruins\bin\Windows\x86\Debug\SharpDX.DXGI.xml
+C:\Users\kevin\Desktop\project spelunky\ruins\ruins\bin\Windows\x86\Debug\SharpDX.Direct3D11.xml
+C:\Users\kevin\Desktop\project spelunky\ruins\ruins\bin\Windows\x86\Debug\SharpDX.Direct2D1.xml
+C:\Users\kevin\Desktop\project spelunky\ruins\ruins\bin\Windows\x86\Debug\SharpDX.XInput.xml
+C:\Users\kevin\Desktop\project spelunky\ruins\ruins\obj\x86\Debug\ruins.csprojAssemblyReference.cache
+C:\Users\kevin\Desktop\project spelunky\ruins\ruins\obj\x86\Debug\ruins.csproj.CoreCompileInputs.cache
+C:\Users\kevin\Desktop\project spelunky\ruins\ruins\obj\x86\Debug\ruins.csproj.CopyComplete
+C:\Users\kevin\Desktop\project spelunky\ruins\ruins\obj\x86\Debug\ruins.exe
+C:\Users\kevin\Desktop\project spelunky\ruins\ruins\obj\x86\Debug\ruins.pdb
+C:\Users\kevin\Desktop\asylum\ruins\ruins\obj\x86\Debug\ruins.csprojAssemblyReference.cache
+C:\Users\kevin\Desktop\asylum\ruins\ruins\obj\x86\Debug\ruins.csproj.CoreCompileInputs.cache
+C:\Users\kevin\Desktop\asylum\ruins\ruins\obj\x86\Debug\ruins.exe
+C:\Users\kevin\Desktop\asylum\ruins\ruins\obj\x86\Debug\ruins.pdb
+C:\Users\kevin\Desktop\asylum\ruins\ruins\bin\Windows\x86\Debug\Content\Sprites\player1.xnb
+C:\Users\kevin\Desktop\asylum\ruins\ruins\bin\Windows\x86\Debug\Content\Sprites\rock1.xnb
+C:\Users\kevin\Desktop\asylum\ruins\ruins\bin\Windows\x86\Debug\Content\Sprites\wall1.xnb
+C:\Users\kevin\Desktop\asylum\ruins\ruins\bin\Windows\x86\Debug\Content\Sprites\wallTest.xnb
+C:\Users\kevin\Desktop\asylum\ruins\ruins\bin\Windows\x86\Debug\Content\Backgrounds\mainmenu_bg.xnb
+C:\Users\kevin\Desktop\asylum\ruins\ruins\bin\Windows\x86\Debug\ruins.exe
+C:\Users\kevin\Desktop\asylum\ruins\ruins\bin\Windows\x86\Debug\ruins.pdb
+C:\Users\kevin\Desktop\asylum\ruins\ruins\bin\Windows\x86\Debug\MonoGame.Framework.dll
+C:\Users\kevin\Desktop\asylum\ruins\ruins\bin\Windows\x86\Debug\SharpDX.MediaFoundation.dll
+C:\Users\kevin\Desktop\asylum\ruins\ruins\bin\Windows\x86\Debug\SharpDX.dll
+C:\Users\kevin\Desktop\asylum\ruins\ruins\bin\Windows\x86\Debug\SharpDX.XAudio2.dll
+C:\Users\kevin\Desktop\asylum\ruins\ruins\bin\Windows\x86\Debug\SharpDX.DXGI.dll
+C:\Users\kevin\Desktop\asylum\ruins\ruins\bin\Windows\x86\Debug\SharpDX.Direct3D11.dll
+C:\Users\kevin\Desktop\asylum\ruins\ruins\bin\Windows\x86\Debug\SharpDX.Direct2D1.dll
+C:\Users\kevin\Desktop\asylum\ruins\ruins\bin\Windows\x86\Debug\SharpDX.XInput.dll
+C:\Users\kevin\Desktop\asylum\ruins\ruins\bin\Windows\x86\Debug\MonoGame.Framework.xml
+C:\Users\kevin\Desktop\asylum\ruins\ruins\bin\Windows\x86\Debug\SharpDX.MediaFoundation.xml
+C:\Users\kevin\Desktop\asylum\ruins\ruins\bin\Windows\x86\Debug\SharpDX.xml
+C:\Users\kevin\Desktop\asylum\ruins\ruins\bin\Windows\x86\Debug\SharpDX.XAudio2.xml
+C:\Users\kevin\Desktop\asylum\ruins\ruins\bin\Windows\x86\Debug\SharpDX.DXGI.xml
+C:\Users\kevin\Desktop\asylum\ruins\ruins\bin\Windows\x86\Debug\SharpDX.Direct3D11.xml
+C:\Users\kevin\Desktop\asylum\ruins\ruins\bin\Windows\x86\Debug\SharpDX.Direct2D1.xml
+C:\Users\kevin\Desktop\asylum\ruins\ruins\bin\Windows\x86\Debug\SharpDX.XInput.xml
+C:\Users\kevin\Desktop\asylum\ruins\ruins\obj\x86\Debug\ruins.csproj.CopyComplete
+C:\Users\kevin\Desktop\asylum\ruins\ruins\bin\Windows\x86\Debug\Content\Sprites\p_blue.xnb
+C:\Users\kevin\Desktop\asylum\ruins\ruins\bin\Windows\x86\Debug\Content\Sprites\p_red.xnb
+C:\Users\kevin\Desktop\asylum\ruins\ruins\bin\Windows\x86\Debug\Content\Sprites\spike_down.xnb
+C:\Users\kevin\Desktop\asylum\ruins\ruins\bin\Windows\x86\Debug\Content\Sprites\spike_up.xnb
+C:\Users\kevin\Desktop\asylum\ruins\ruins\bin\Windows\x86\Debug\Content\Sprites\cloud.xnb
+C:\Users\kevin\Desktop\asylum\ruins\ruins\bin\Windows\x86\Debug\Content\Backgrounds\sky_bg.xnb
+C:\Users\kevin\Desktop\asylum\ruins\ruins\bin\Windows\x86\Debug\Content\SpriteFonts\bebas32.xnb
+C:\Users\kevin\Desktop\asylum\ruins\ruins\bin\Windows\x86\Debug\Content\SpriteFonts\bebas48.xnb
+C:\Users\kevin\Desktop\asylum\ruins\ruins\bin\Windows\x86\Debug\Content\SpriteFonts\stocky48.xnb
+C:\Users\kevin\Desktop\asylum\ruins\ruins\bin\Windows\x86\Debug\Content\SpriteFonts\bebas64.xnb
+C:\Users\kevin\Desktop\asylum\ruins\ruins\bin\Windows\x86\Debug\Content\SpriteFonts\bebas80.xnb
+C:\Users\kevin\Desktop\asylum\ruins\ruins\bin\Windows\x86\Debug\Content\Sprites\violet.xnb
+C:\Users\kevin\Desktop\asylum\ruins\ruins\bin\Windows\x86\Debug\Content\SFX\bounce.xnb
+C:\Users\kevin\Desktop\asylum\ruins\ruins\bin\Windows\x86\Debug\Content\SFX\dead.xnb
+C:\Users\kevin\Desktop\asylum\ruins\ruins\bin\Windows\x86\Debug\Content\SFX\select.xnb
+C:\Users\kevin\Desktop\asylum\ruins\ruins\bin\Windows\x86\Debug\Content\SFX\switch.xnb
+C:\Users\kevin\Desktop\asylum\ruins\ruins\bin\Windows\x86\Debug\Content\SFX\switchBack.xnb
+C:\Users\kevin\Desktop\asylum\ruins\ruins\bin\Windows\x86\Debug\Content\Sprites\refuel_default.xnb
+C:\Users\kevin\Desktop\asylum\ruins\ruins\bin\Windows\x86\Debug\Content\Sprites\refuel_used.xnb
+C:\Users\kevin\Desktop\asylum\ruins\ruins\bin\Windows\x86\Debug\Content\Sprites\spike_left.xnb
+C:\Users\kevin\Desktop\asylum\ruins\ruins\bin\Windows\x86\Debug\Content\Sprites\spike_right.xnb
