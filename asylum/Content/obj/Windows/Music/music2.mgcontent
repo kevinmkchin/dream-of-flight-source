@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SourceFile>C:/Users/kevin/Desktop/asylum/asylum/asylum/Content/Music/music2.wav</SourceFile>
+  <SourceTime>2020-01-04T22:29:09.3616464-08:00</SourceTime>
+  <DestFile>C:/Users/kevin/Desktop/asylum/asylum/asylum/Content/bin/Windows/Music/music2.xnb</DestFile>
+  <DestTime>2020-01-04T22:35:31.8362476-08:00</DestTime>
+  <Importer>WavImporter</Importer>
+  <ImporterTime>2018-12-08T08:35:54-08:00</ImporterTime>
+  <Processor>SongProcessor</Processor>
+  <ProcessorTime>2018-12-08T08:35:54-08:00</ProcessorTime>
+  <Parameters>
+    <Key>Quality</Key>
+    <Value>Best</Value>
+  </Parameters>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput>
+    <string>C:/Users/kevin/Desktop/asylum/asylum/asylum/Content/bin/Windows/Music/music2.wma</string>
+  </BuildOutput>
+</PipelineBuildEvent>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SourceFile>C:/Users/kevin/Desktop/asylum/asylum/asylum/Content/Sprites/refuel_used.png</SourceFile>
-  <SourceTime>2020-01-04T19:28:49.3292414-08:00</SourceTime>
+  <SourceTime>2020-01-04T20:24:08.9907848-08:00</SourceTime>
   <DestFile>C:/Users/kevin/Desktop/asylum/asylum/asylum/Content/bin/Windows/Sprites/refuel_used.xnb</DestFile>
-  <DestTime>2020-01-04T19:47:51.3655285-08:00</DestTime>
+  <DestTime>2020-01-04T20:24:15.1935822-08:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2018-12-08T08:35:54-08:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

@@ -1,16 +1,23 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using Microsoft.Xna.Framework.Media;
 using ruins.Source;
 using ruins.Source.Entity;
 using ruins.Source.Level;
 using ruins.Source.Screen;
 using ruins.Source.Tool;
+using System;
 using System.Linq;
 
 namespace ruins {
 
     public class Main : Game {
+
+        public static Random Random;
+
+        public float shakeRadius { get; set; } = 0;
+        public float shakeAngle { get; set; } = 0;
 
         //TODO change this to a property
         private int GameState; //0 = mainmenu, 1 = gamescreen
@@ -31,6 +38,9 @@ namespace ruins {
         static GraphicsDeviceManager graphics;
         SpriteBatch mainBatch;
 
+        private Song music1;
+        private Song music2;
+
         public Main() {
             graphics = new GraphicsDeviceManager(this);
             graphics.PreferredBackBufferWidth = 1280;
@@ -47,6 +57,8 @@ namespace ruins {
         /// </summary>
         protected override void Initialize() {
 
+            this.Window.Title = "dream of flight";
+
             mainMenu = new MainMenu();
             gameScreen = new GameScreen();
             GameState = 0;
@@ -61,6 +73,12 @@ namespace ruins {
 
         protected override void LoadContent() {
             mainBatch = new SpriteBatch(GraphicsDevice);
+
+            music1 = Content.Load<Song>("Music/music1");
+            music2 = Content.Load<Song>("Music/music2");
+
+            MediaPlayer.Play(music1);
+
             mainMenu.LoadContent(this, mainBatch);
             gameScreen.LoadContent(this, mainBatch);
 
@@ -68,12 +86,15 @@ namespace ruins {
         }
         
         protected override void UnloadContent() {
-
+            
         }
 
         protected override void Update(GameTime gameTime) {
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
-                Exit();
+
+            if(MediaPlayer.PlayPosition.TotalSeconds == 0.0f && MediaPlayer.State != MediaState.Playing) {
+                MediaPlayer.Play(music2);
+                MediaPlayer.IsRepeating = true;
+            }
             
             if (GameState == 0 && !(Screen is MainMenu)) {
                 Screen = mainMenu;
@@ -87,11 +108,23 @@ namespace ruins {
         }
 
         protected override void Draw(GameTime gameTime) {
-            GraphicsDevice.Clear(Color.Beige);  //(Color.CornflowerBlue);
+            GraphicsDevice.Clear(Color.Turquoise);
 
             if (Screen is GameScreen) {
+
+                Random = new Random();
+                Vector2 offset = new Vector2(0, 0);
+                offset = new Vector2((float)(Math.Sin(shakeAngle) * shakeRadius), 
+                    (float)(Math.Cos(shakeAngle) * shakeRadius));
+                shakeRadius *= 0.9f;
+                shakeAngle += Random.Next(-60, 60);
+                if (shakeRadius <= 0.5f) {
+                    shakeRadius = 0;
+                }
+
                 //PointWrap makes scaling sprites pixel perfect.
-                mainBatch.Begin(samplerState: SamplerState.PointWrap);
+                mainBatch.Begin(samplerState: SamplerState.PointWrap, 
+                    transformMatrix: Matrix.CreateTranslation(offset.X,offset.Y,0));
             } else {
                 mainBatch.Begin();
             }
