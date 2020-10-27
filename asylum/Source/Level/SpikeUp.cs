@@ -12,9 +12,9 @@ namespace ruins.Source.Level {
 
         public static String spritePath = "Sprites/spike_up";
 
-        public static int colWidth = GameScreen.howBigIs16Pixels - 2;
+        public static int colWidth = GameScreen.howBigIs16Pixels - 4;
         public static int colHeight = GameScreen.howBigIs16Pixels / 2;
-        public static int colOffsetX = 1;
+        public static int colOffsetX = 2;
         public static int colOffsetY = GameScreen.howBigIs16Pixels / 2;
 
         public SpikeUp(Texture2D sprite, int x, int y) : base(sprite, x, y) {

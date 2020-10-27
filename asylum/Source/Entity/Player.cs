@@ -14,39 +14,49 @@ using System.Threading.Tasks;
 namespace ruins.Source.Entity {
     class Player : SpriteClass {
 
-        private const float defaultGravity = 0.5f;
+        private const float defaultGravity = 0.68f;
         private const float maxSpeedGround = 5.5f;
         private const float maxSpeedSwitched = 8f;
-        public float energy { get; set; } = 40;
-        private float depletionRate = 1f;
+        public const float energyMax = 40;
+        public float getEnergyMax() {
+            return energyMax;
+        }
+        public float energy { get; set; } = 0;
+        private float depletionRate = 0.117f;
         private float passiveDepRate = 0.07f;
         private float rechargeRate = 1f;
 
-        private float groundAccel = 0.95f;
-        private float groundDecel = 2f;
-        private float airAccel = 0.5f;
-        private float airDecel = 0.55f;
+        private float groundAccel = 1.1f;
+        private float groundDecel = 2.1f;
+        private float airAccel = 2f;
+        private float airDecel = 2f;
         private float maxSpeed = maxSpeedGround;
         private float Gravity = defaultGravity;
-        private int JumpSpeed = -11;
-        private int maxFallSpeed = 11;
-        private float switchAccel = 0.30f;
-        private float switchDecel = 0.2f;
+        private float JumpSpeed = -12.3f;
+        private float maxFallSpeed = 12.3f;
+        private float switchAccel = 0.4f;
+        private float switchDecel = 0.4f;
 
         public bool dead { get; set; } = false;
         public bool show { get; set; } = true;
         public int deathCounter = 0;
         public int deathReset = 60;
-        private bool switched = false;
+        public bool switched { get; set; } = false;
         private Vector2 Velocity = Vector2.Zero;
+        public void SetVelocity(Vector2 vel) {
+            Velocity = vel;
+        }
         private bool canWallJumpLeft = false;
         private bool canWallJumpRight = false;
         private bool Jumped = false;
         private bool Jumping = false;
         private double jumpGracePeriod = 0.6;
         private double jumpGraceTimer = 0.0;
+        private float lastPressedJump = 10;
+        private float lastPressGrace = 0.12f;
 
-        private Texture2D normalSprite;
+        private Texture2D rightSprite;
+        private Texture2D leftSprite;
         private Texture2D switchedSprite;
 
 
@@ -55,34 +65,55 @@ namespace ruins.Source.Entity {
         public static int PlayerWidth {
             get;
             set;
-        } = 32;
+        } = 30;
 
         public static int PlayerHeight {
             get;
             set;
         } = 40;
 
-        public Player(Texture2D sprite, int x, int y, Texture2D switchedSprite, GameScreen gs) : base(sprite, x, y) {
+        public Player(Texture2D sprite, int x, int y, 
+            Texture2D leftSprite, Texture2D switchedSprite, 
+            GameScreen gs) : base(sprite, x, y) {
             this.gs = gs;
-            this.normalSprite = sprite;
+            this.rightSprite = sprite;
+            this.leftSprite = leftSprite;
             this.switchedSprite = switchedSprite;
         }
 
-        public void Update(List<SpriteClass> collidable) {
+        public override void Update() {
+            List<SpriteClass> collidable = gs.Collidable;
+
             int oldX = X;
             int oldY = Y;
 
             if (switched) {
                 Sprite = switchedSprite;
             } else {
-                Sprite = normalSprite;
+                if (Velocity.X > 0) {
+                    Sprite = rightSprite;
+                } else if (Velocity.X < 0) {
+                    Sprite = leftSprite;
+                }
             }
+
+            lastPressedJump += 0.01f;
+
 
             CheckLevelFinished();
             CheckFellDown();
 
-            Move();
+            if (!dead) {
+                Move();
+            }
+
+            bool onGround = false;
             #region MOVEMENT AND COLLISION
+
+            if (Math.Abs(Velocity.Y) <= maxFallSpeed)
+            {
+                Velocity.Y += Gravity;
+            }
 
             bool xCollided = false;
             bool yCollided = false;
@@ -92,74 +123,123 @@ namespace ruins.Source.Entity {
             //check movement collision then move
             foreach (SpriteClass sprite in collidable) {
 
+                if (IsTouching(sprite, 3) && sprite is Refuel) {
+                    var refuel = (Refuel) sprite;
+                    if (!refuel.used && energy < energyMax) {
+                        energy = energyMax;
+                        gs.screenShakeEffect(7);
+                        gs.playRefuelEffect();
+                        refuel.setUsed(true);
+                    }
+                }
+
                 if (IsTouching(sprite, 1) && sprite is Spike) {
                     dead = true;
                 }
 
-                if (IsTouchingRight(sprite, 2) && Jumping) {
+                if (IsTouchingRight(sprite, 3) && Jumping && sprite is Wall) {
                     canWallJumpRight = true;
                 }
-                if (IsTouchingLeft(sprite, 2) && Jumping) {
+                if (IsTouchingLeft(sprite, 3) && Jumping && sprite is Wall) {
                     canWallJumpLeft = true;
                 }
 
-                if (IsTouchingBottom(sprite, 1)) { //|| IsTouchingLeft(sprite, 1) || IsTouchingRight(sprite, 1)) {
+                if(IsTouchingBottom(sprite, 1) && sprite is TempBlock) {
+                    var temp = (TempBlock)sprite;
+                    if (!temp.triggered) {
+                        gs.screenShakeEffect(2);
+                        gs.playBlockBreakEffect();
+                    }
+                    temp.triggered = true;
+                }
+                if(sprite is TempBlock) {
+                    var tempCol = new TempBlock(sprite.Sprite, sprite.X, sprite.Y);
+                    tempCol.EnableCollision(GameScreen.howBigIs16Pixels, GameScreen.howBigIs16Pixels);
+
+                    if (!IsTouching(tempCol, 1)) {
+                        var temp = (TempBlock)sprite;
+                        temp.canRecover = true;
+                    } else if (IsTouching(tempCol, 1)) {
+                        var temp = (TempBlock)sprite;
+                        temp.canRecover = false;
+                    }
+                }
+                
+                if (IsTouchingBottom(sprite, 1) && sprite is Wall) { //|| IsTouchingLeft(sprite, 1) || IsTouchingRight(sprite, 1)) {
                     if (switched) {
                         if (!Jumped) {
                             Switch();
                         }
                     } else {
+                        /*
                         if (energy < 40) {
                             energy += rechargeRate;
                         }
+                        */
                     }
+                    onGround = true;
                     canJump = true;
                     jumpGraceTimer = 0;
                 } else {
                     canJump = false;
                 }
 
-                if (Jumped) {
+                if (lastPressedJump <= lastPressGrace) {
                     if (jumpGraceTimer <= jumpGracePeriod) { //if just a little off edge and still jumped, allow jump
+                                        if (!Jumping) {
+                    gs.playJumpEffect();
+                }
+                if (!switched) {
+                    Jumped = true;
+                }
+                        lastPressedJump += lastPressGrace;
                         Velocity.Y = JumpSpeed;
                         Jumping = true;
                     } else {
-                        if (canWallJumpLeft) {
-                            Velocity.X = 8;
-                            Velocity.Y = JumpSpeed;
-                        } else if (canWallJumpRight) {
-                            Velocity.X = -8;
-                            Velocity.Y = JumpSpeed;
+                        if (canWallJumpLeft && lastPressedJump < 0.001f) {
+                            Velocity.X = 12.3f;
+                            Velocity.Y = JumpSpeed * 0.8f;
+                        } else if (canWallJumpRight && lastPressedJump < 0.001f) {
+                            Velocity.X = -12.3f;
+                            Velocity.Y = JumpSpeed * 0.8f;
                         }
+                    }
+                    //if just pressed K, then jump only a little bit
+                    if (switched) {
+                        Velocity.Y *= 0.3f;
                     }
                 }
 
-                if (Velocity.Y > 0 && IsTouchingBottom(sprite, Velocity.Y)) {
+                if (Velocity.X > 0 && IsTouchingRight(sprite, Velocity.X) && sprite is Wall)
+                {
+                    while (!IsTouchingRight(sprite, 1))
+                    {
+                        X += 1;
+                    }
+                    xCollided = true;
+                    Velocity.X = 0;
+                }
+                if (Velocity.X < 0 && IsTouchingLeft(sprite, Velocity.X) && sprite is Wall)
+                {
+                    while (!IsTouchingLeft(sprite, 1))
+                    {
+                        X -= 1;
+                    }
+                    xCollided = true;
+                    Velocity.X = 0;
+                }
+                if (Velocity.Y > 0 && IsTouchingBottom(sprite, Velocity.Y) && sprite is Wall) {
                     while (!IsTouchingBottom(sprite, 1)) {
                         Y += 1;
                     }
                     Jumping = false;
                     yCollided = true;
                 }
-                if (Velocity.Y < 0 && IsTouchingTop(sprite, Velocity.Y)) {
+                if (Velocity.Y < 0 && IsTouchingTop(sprite, Velocity.Y) && sprite is Wall) {
                     while (!IsTouchingTop(sprite, 1)) {
                         Y -= 1;
                     }
                     yCollided = true;
-                }
-                if (Velocity.X > 0 && IsTouchingRight(sprite, Velocity.X)) {
-                    while (!IsTouchingRight(sprite, 1)) {
-                        X += 1;
-                    }
-                    xCollided = true;
-                    Velocity.X = 0;
-                }
-                if (Velocity.X < 0 && IsTouchingLeft(sprite, Velocity.X)) {
-                    while (!IsTouchingLeft(sprite, 1)) {
-                        X -= 1;
-                    }
-                    xCollided = true;
-                    Velocity.X = 0;
                 }
 
             }
@@ -167,11 +247,6 @@ namespace ruins.Source.Entity {
 
             if (!canJump) {
                 jumpGraceTimer += 0.1;
-            }
-
-
-            if (Math.Abs(Velocity.Y) <= maxFallSpeed) {
-                Velocity.Y += Gravity;
             }
 
             if (!xCollided) {
@@ -185,10 +260,25 @@ namespace ruins.Source.Entity {
             }
 
             #endregion MOVEMENT AND COLLISION
+            Jumping = !onGround;
 
             if (energy <= 0 && switched) {
                 Switch();
                 energy = 0;
+            }
+
+            if (switched && !dead) {
+                var moveFactor = Math.Abs(Velocity.Y) + Math.Abs(Velocity.X);
+                if (moveFactor > 0) {
+                    if (Input.IsPressed(Keys.A) || Input.IsPressed(Keys.D)
+                        || Input.IsPressed(Keys.W) || Input.IsPressed(Keys.S)) {
+                        energy -= depletionRate * moveFactor;
+                    } else {
+                        energy -= passiveDepRate;
+                    }
+                } else {
+                    energy -= passiveDepRate;
+                }
             }
 
             if (dead) {
@@ -196,6 +286,9 @@ namespace ruins.Source.Entity {
                 Y = oldY;
                 //show = false;
                 if(deathCounter == 0) {
+                    if (gs.blackAlpha != 1) {
+                        gs.screenShakeEffect(20);
+                    }
                     gs.playDeadEffect();
                 }
                 deathCounter += 1;
@@ -326,7 +419,7 @@ namespace ruins.Source.Entity {
                     }
                 }
             }
-
+            /*
             if (switched && (Input.IsPressed(Keys.W) || Input.IsPressed(Keys.S)
                 || Input.IsPressed(Keys.A) || Input.IsPressed(Keys.D))) {
                 energy -= depletionRate;
@@ -334,19 +427,28 @@ namespace ruins.Source.Entity {
                 energy -= passiveDepRate;
                 // passive delption rate
             }
+            */
 
             if (Input.HasBeenPressed(Keys.K)) {
-                Jumped = true;
-                Switch();
+                if (energy > 0) {
+                    if (!switched) {
+                        lastPressedJump = 0;
+                        Jumped = true;
+                    }
+                    Switch();
+                }
             }
 
 
             if (Input.HasBeenPressed(Keys.J)) {
-                if (!Jumping) {
-                    gs.playJumpEffect();
-                }
-                if (!switched) {
-                    Jumped = true;
+                lastPressedJump = 0;
+
+            }
+
+            // variable jump height if J is released early
+            if (Input.HasBeenReleased(Keys.J)) {
+                if (Jumping && !switched) {
+                    Velocity.Y *= 0.5f;
                 }
             }
 
@@ -354,9 +456,11 @@ namespace ruins.Source.Entity {
 
         private void Switch() {
             if (switched) {
+                gs.screenShakeEffect(7);
                 gs.playSwitchBackEffect();
                 SetSwitchNormal();
             } else {
+                gs.screenShakeEffect(7);
                 gs.playSwitchEffect();
                 SetSwitchFlying();
             }
@@ -367,6 +471,8 @@ namespace ruins.Source.Entity {
 
             Gravity = defaultGravity;
             maxSpeed = maxSpeedGround;
+
+            Sprite = rightSprite;
         }
 
         public void SetSwitchFlying() {
@@ -392,7 +498,8 @@ namespace ruins.Source.Entity {
             if (X + (PlayerWidth / 2) >= Main.GetScreenWidth()
                 || Y + (PlayerHeight / 2) <= 0) {
                 SetSwitchNormal();
-                gs.LoadRoom(gs.roomTracker + 1);
+                gs.roomTracker += 1;
+                gs.LoadRoom(gs.roomTracker);
             }
         }
 

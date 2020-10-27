@@ -9,8 +9,8 @@
     <ProjectGuid>{82C8CD7D-534D-4B6E-99E0-C3829783819A}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ruins</RootNamespace>
-    <AssemblyName>ruins</AssemblyName>
+    <RootNamespace>DreamOfFlight</RootNamespace>
+    <AssemblyName>DreamOfFlight</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MonoGamePlatform>Windows</MonoGamePlatform>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
@@ -35,7 +35,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Icon.ico</ApplicationIcon>
+    <ApplicationIcon>star.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationManifest>app.manifest</ApplicationManifest>
@@ -53,7 +53,9 @@
     <Compile Include="Source\Level\SpikeLeft.cs" />
     <Compile Include="Source\Level\SpikeRight.cs" />
     <Compile Include="Source\Level\SpikeUp.cs" />
+    <Compile Include="Source\Level\TempBlock.cs" />
     <Compile Include="Source\Level\Tile.cs" />
+    <Compile Include="Source\Level\Wall.cs" />
     <Compile Include="Source\Screen\GameScreen.cs" />
     <Compile Include="Source\Screen\MainMenu.cs" />
     <Compile Include="Source\Screen\State.cs" />
@@ -73,6 +75,7 @@
     <Content Include="Content\Sprites\wall1.png" />
     <Content Include="Content\Sprites\wallTest.png" />
     <Content Include="Icon.ico" />
+    <Content Include="star.ico" />
   </ItemGroup>
   <ItemGroup>
     <MonoGameContentReference Include="Content\Content.mgcb" />

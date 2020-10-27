@@ -4,35 +4,131 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/kevin/Desktop/asylum/asylum/asylum/Content/Backgrounds/mainmenu_bg.png</File>
+    <File>C:/Users/kevin/Desktop/asylum/asylum/asylum/Content/Backgrounds/main_bg.png</File>
     <File>C:/Users/kevin/Desktop/asylum/asylum/asylum/Content/Backgrounds/sky_bg.png</File>
+    <File>C:/Users/kevin/Desktop/asylum/asylum/asylum/Content/Music/music1.wav</File>
+    <File>C:/Users/kevin/Desktop/asylum/asylum/asylum/Content/Music/music2.wav</File>
+    <File>C:/Users/kevin/Desktop/asylum/asylum/asylum/Content/SFX/block_break.wav</File>
     <File>C:/Users/kevin/Desktop/asylum/asylum/asylum/Content/SFX/bounce.wav</File>
     <File>C:/Users/kevin/Desktop/asylum/asylum/asylum/Content/SFX/dead.wav</File>
     <File>C:/Users/kevin/Desktop/asylum/asylum/asylum/Content/SFX/jump.wav</File>
+    <File>C:/Users/kevin/Desktop/asylum/asylum/asylum/Content/SFX/refuel.wav</File>
     <File>C:/Users/kevin/Desktop/asylum/asylum/asylum/Content/SFX/select.wav</File>
     <File>C:/Users/kevin/Desktop/asylum/asylum/asylum/Content/SFX/switch.wav</File>
     <File>C:/Users/kevin/Desktop/asylum/asylum/asylum/Content/SFX/switchBack.wav</File>
+    <File>C:/Users/kevin/Desktop/asylum/asylum/asylum/Content/SpriteFonts/18century48.spritefont</File>
+    <File>C:/Users/kevin/Desktop/asylum/asylum/asylum/Content/SpriteFonts/bebas18.spritefont</File>
     <File>C:/Users/kevin/Desktop/asylum/asylum/asylum/Content/SpriteFonts/bebas32.spritefont</File>
     <File>C:/Users/kevin/Desktop/asylum/asylum/asylum/Content/SpriteFonts/bebas48.spritefont</File>
     <File>C:/Users/kevin/Desktop/asylum/asylum/asylum/Content/SpriteFonts/bebas64.spritefont</File>
     <File>C:/Users/kevin/Desktop/asylum/asylum/asylum/Content/SpriteFonts/bebas80.spritefont</File>
     <File>C:/Users/kevin/Desktop/asylum/asylum/asylum/Content/SpriteFonts/stocky48.spritefont</File>
-    <File>C:/Users/kevin/Desktop/asylum/asylum/asylum/Content/Sprites/cloud.png</File>
-    <File>C:/Users/kevin/Desktop/asylum/asylum/asylum/Content/Sprites/p_blue.png</File>
-    <File>C:/Users/kevin/Desktop/asylum/asylum/asylum/Content/Sprites/p_red.png</File>
+    <File>C:/Users/kevin/Desktop/asylum/asylum/asylum/Content/Sprites/black.png</File>
+    <File>C:/Users/kevin/Desktop/asylum/asylum/asylum/Content/Sprites/blue.png</File>
+    <File>C:/Users/kevin/Desktop/asylum/asylum/asylum/Content/Sprites/cyan.png</File>
+    <File>C:/Users/kevin/Desktop/asylum/asylum/asylum/Content/Sprites/Normal/Normal (1).png</File>
+    <File>C:/Users/kevin/Desktop/asylum/asylum/asylum/Content/Sprites/Normal/Normal (10).png</File>
+    <File>C:/Users/kevin/Desktop/asylum/asylum/asylum/Content/Sprites/Normal/Normal (11).png</File>
+    <File>C:/Users/kevin/Desktop/asylum/asylum/asylum/Content/Sprites/Normal/Normal (12).png</File>
+    <File>C:/Users/kevin/Desktop/asylum/asylum/asylum/Content/Sprites/Normal/Normal (13).png</File>
+    <File>C:/Users/kevin/Desktop/asylum/asylum/asylum/Content/Sprites/Normal/Normal (14).png</File>
+    <File>C:/Users/kevin/Desktop/asylum/asylum/asylum/Content/Sprites/Normal/Normal (15).png</File>
+    <File>C:/Users/kevin/Desktop/asylum/asylum/asylum/Content/Sprites/Normal/Normal (16).png</File>
+    <File>C:/Users/kevin/Desktop/asylum/asylum/asylum/Content/Sprites/Normal/Normal (2).png</File>
+    <File>C:/Users/kevin/Desktop/asylum/asylum/asylum/Content/Sprites/Normal/Normal (3).png</File>
+    <File>C:/Users/kevin/Desktop/asylum/asylum/asylum/Content/Sprites/Normal/Normal (4).png</File>
+    <File>C:/Users/kevin/Desktop/asylum/asylum/asylum/Content/Sprites/Normal/Normal (5).png</File>
+    <File>C:/Users/kevin/Desktop/asylum/asylum/asylum/Content/Sprites/Normal/Normal (6).png</File>
+    <File>C:/Users/kevin/Desktop/asylum/asylum/asylum/Content/Sprites/Normal/Normal (7).png</File>
+    <File>C:/Users/kevin/Desktop/asylum/asylum/asylum/Content/Sprites/Normal/Normal (8).png</File>
+    <File>C:/Users/kevin/Desktop/asylum/asylum/asylum/Content/Sprites/Normal/Normal (9).png</File>
+    <File>C:/Users/kevin/Desktop/asylum/asylum/asylum/Content/Sprites/p_left.png</File>
+    <File>C:/Users/kevin/Desktop/asylum/asylum/asylum/Content/Sprites/p_right.png</File>
+    <File>C:/Users/kevin/Desktop/asylum/asylum/asylum/Content/Sprites/p_switched.png</File>
     <File>C:/Users/kevin/Desktop/asylum/asylum/asylum/Content/Sprites/player1.png</File>
+    <File>C:/Users/kevin/Desktop/asylum/asylum/asylum/Content/Sprites/red.png</File>
     <File>C:/Users/kevin/Desktop/asylum/asylum/asylum/Content/Sprites/refuel_default.png</File>
     <File>C:/Users/kevin/Desktop/asylum/asylum/asylum/Content/Sprites/refuel_used.png</File>
     <File>C:/Users/kevin/Desktop/asylum/asylum/asylum/Content/Sprites/rock1.png</File>
+    <File>C:/Users/kevin/Desktop/asylum/asylum/asylum/Content/Sprites/snow.png</File>
+    <File>C:/Users/kevin/Desktop/asylum/asylum/asylum/Content/Sprites/Special/Special (1).png</File>
+    <File>C:/Users/kevin/Desktop/asylum/asylum/asylum/Content/Sprites/Special/Special (10).png</File>
+    <File>C:/Users/kevin/Desktop/asylum/asylum/asylum/Content/Sprites/Special/Special (11).png</File>
+    <File>C:/Users/kevin/Desktop/asylum/asylum/asylum/Content/Sprites/Special/Special (12).png</File>
+    <File>C:/Users/kevin/Desktop/asylum/asylum/asylum/Content/Sprites/Special/Special (13).png</File>
+    <File>C:/Users/kevin/Desktop/asylum/asylum/asylum/Content/Sprites/Special/Special (14).png</File>
+    <File>C:/Users/kevin/Desktop/asylum/asylum/asylum/Content/Sprites/Special/Special (15).png</File>
+    <File>C:/Users/kevin/Desktop/asylum/asylum/asylum/Content/Sprites/Special/Special (16).png</File>
+    <File>C:/Users/kevin/Desktop/asylum/asylum/asylum/Content/Sprites/Special/Special (2).png</File>
+    <File>C:/Users/kevin/Desktop/asylum/asylum/asylum/Content/Sprites/Special/Special (3).png</File>
+    <File>C:/Users/kevin/Desktop/asylum/asylum/asylum/Content/Sprites/Special/Special (4).png</File>
+    <File>C:/Users/kevin/Desktop/asylum/asylum/asylum/Content/Sprites/Special/Special (5).png</File>
+    <File>C:/Users/kevin/Desktop/asylum/asylum/asylum/Content/Sprites/Special/Special (6).png</File>
+    <File>C:/Users/kevin/Desktop/asylum/asylum/asylum/Content/Sprites/Special/Special (7).png</File>
+    <File>C:/Users/kevin/Desktop/asylum/asylum/asylum/Content/Sprites/Special/Special (8).png</File>
+    <File>C:/Users/kevin/Desktop/asylum/asylum/asylum/Content/Sprites/Special/Special (9).png</File>
     <File>C:/Users/kevin/Desktop/asylum/asylum/asylum/Content/Sprites/spike_down.png</File>
     <File>C:/Users/kevin/Desktop/asylum/asylum/asylum/Content/Sprites/spike_left.png</File>
     <File>C:/Users/kevin/Desktop/asylum/asylum/asylum/Content/Sprites/spike_right.png</File>
     <File>C:/Users/kevin/Desktop/asylum/asylum/asylum/Content/Sprites/spike_up.png</File>
+    <File>C:/Users/kevin/Desktop/asylum/asylum/asylum/Content/Sprites/stone.png</File>
     <File>C:/Users/kevin/Desktop/asylum/asylum/asylum/Content/Sprites/violet.png</File>
     <File>C:/Users/kevin/Desktop/asylum/asylum/asylum/Content/Sprites/wall1.png</File>
     <File>C:/Users/kevin/Desktop/asylum/asylum/asylum/Content/Sprites/wallTest.png</File>
+    <File>C:/Users/kevin/Desktop/asylum/asylum/asylum/Content/Sprites/yolo.png</File>
+    <File>C:/Users/kevin/Desktop/asylum/asylum/asylum/Content/Sprites/yolo2.png</File>
+    <File>C:/Users/kevin/Desktop/asylum/asylum/asylum/Content/Sprites/yolo3.png</File>
+    <File>C:/Users/kevin/Desktop/asylum/asylum/asylum/Content/Sprites/yolo4.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
