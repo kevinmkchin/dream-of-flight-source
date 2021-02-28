@@ -24,6 +24,10 @@ namespace ruins.Source.Level {
         private Texture2D spikeDown;
         private Texture2D spikeLeft;
         private Texture2D spikeRight;
+        private Texture2D r_default;
+        private Texture2D r_used;
+        private List<Texture2D> NormalWalls = new List<Texture2D>();
+        private List<Texture2D> SpecialWalls = new List<Texture2D>();
 
         public LevelManager(Main main, int howBigIs16Pixels) {
             this.main = main;
@@ -35,11 +39,22 @@ namespace ruins.Source.Level {
         /// </summary>
         public void LoadSprites() {
 
-            wallTest = main.Content.Load<Texture2D>("Sprites/cloud");
+            for(int i = 1; i < 17; i++) {
+                string str1 = "Normal (" + i + ")";
+                string str2 = "Special (" + i + ")";
+                Texture2D t1 = main.Content.Load<Texture2D>("Sprites/Normal/" + str1);
+                Texture2D t2 = main.Content.Load<Texture2D>("Sprites/Special/" + str2);
+                NormalWalls.Add(t1);
+                SpecialWalls.Add(t2);
+            }
+
+            wallTest = main.Content.Load<Texture2D>("Sprites/yolo");
             spikeUp = main.Content.Load<Texture2D>(SpikeUp.spritePath);
             spikeDown = main.Content.Load<Texture2D>(SpikeDown.spritePath);
             spikeLeft = main.Content.Load<Texture2D>(SpikeLeft.spritePath);
             spikeRight = main.Content.Load<Texture2D>(SpikeRight.spritePath);
+            r_default = main.Content.Load<Texture2D>("Sprites/refuel_default");
+            r_used = main.Content.Load<Texture2D>("Sprites/refuel_used");
 
         }
 
@@ -62,11 +77,9 @@ namespace ruins.Source.Level {
 
                 Room r = MakeRoomAndTiles(mapArray);
                 var fileName = str.Substring(roomDirectory.Length + 1);
-                int key = Int32.Parse(fileName.Substring(3, 1));
-
+                fileName = fileName.Substring(0, fileName.Length - 5);
+                int key = Int32.Parse(fileName.Substring(3));
                 rooms.Add(key, r);
-                
-                //Console.WriteLine(fileName.Substring(3,1).ToString());
 
             }
         }
@@ -95,12 +108,25 @@ namespace ruins.Source.Level {
                 case '0':
                     break;
                 case 'A':
-                    newTile = new Tile(wallTest, j * howBigIs16Pixels, i * howBigIs16Pixels);
+                    newTile = new Wall(NormalWalls[2], j * howBigIs16Pixels, i * howBigIs16Pixels);
+                    newTile.EnableCollision(howBigIs16Pixels, howBigIs16Pixels);
+                    break;
+                case 'B':
+                    int index = rng.Next(0, 16);
+                    newTile = new Wall(NormalWalls[index], j * howBigIs16Pixels, i * howBigIs16Pixels);
                     newTile.EnableCollision(howBigIs16Pixels, howBigIs16Pixels);
                     break;
                 case 'X':
                     room.startX = j * howBigIs16Pixels;
                     room.startY = i * howBigIs16Pixels + (Player.PlayerHeight - howBigIs16Pixels);
+                    break;
+                case 'F':
+                    newTile = new Refuel(r_default, j * howBigIs16Pixels, i * howBigIs16Pixels, r_used);
+                    newTile.EnableCollision(howBigIs16Pixels, howBigIs16Pixels);
+                    break;
+                case 'G':
+                    newTile = new TempBlock(SpecialWalls[0], j * howBigIs16Pixels, i * howBigIs16Pixels);
+                    newTile.EnableCollision(howBigIs16Pixels, howBigIs16Pixels);
                     break;
                 case 'H':
                     newTile = new SpikeUp(spikeUp, j * howBigIs16Pixels, i * howBigIs16Pixels);

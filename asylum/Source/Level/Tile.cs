@@ -14,5 +14,8 @@ namespace ruins.Source.Level {
 
         }
 
+        public override void Update() {
+
+        }
     }
 }

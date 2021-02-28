@@ -21,11 +21,12 @@ namespace ruins.Source.Entity {
         public Texture2D Sprite { get; set; }
 
 
-        public bool collisionEnabled = false;
+        public bool collisionEnabled { get; set; } = false;
         private int collisionWidth;
         private int collisionHeight;
         private int offsetX;
         private int offsetY;
+
         public Rectangle CollisionBox {
             get {
                 if (collisionEnabled) {
@@ -36,6 +37,8 @@ namespace ruins.Source.Entity {
                 }
             }
         }
+
+        public abstract void Update();
 
         protected SpriteClass(Texture2D sprite, int x, int y) {
             X = x;
